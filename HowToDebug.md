@@ -31,7 +31,7 @@ Please make sure that you have finished the previous steps before going to this 
 Open the projects, AMBF and your plugin, and build them in "DEBUG" mode.
 Select AMBF project as "active project" and specify your run configuratioin in "Project" tab on your left.
 
-![Qtcreator_documentation](./figs/howtodebug_image.png)
+![Qtcreator_documentation](./howtodebug_image.png)
 
 ## Trouble shooting
 In the case when you have a trouble compiling, you can try following steps and redo the steps.
