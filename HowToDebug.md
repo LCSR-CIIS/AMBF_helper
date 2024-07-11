@@ -23,7 +23,7 @@ Before starting make sure you are not auto sourcing any AMBF build into your ter
 
 ### Step 0
 
-Qt Creator stores configurations for each `CMake` project in a `xml` file called `CMakeLists.txt.user`. Please make sure to erase this file before continuing the steps below. This file would be usually found in the root folder of `ambf`.
+For any CMake project loaded in Qt Creator, Qt Creator will store the configuration in an `xml` file called `CMakeLists.txt.user`. If you find this file in the AMBF root (`ambf`) folder, please make sure to erase this file before continuing the steps below.
 
 ### Step 1
 
@@ -52,7 +52,7 @@ Now, import AMBF into Qt Creator the using the `CMakeLists.txt` file in the root
 
 ![8d28e139e45676a621b9152bbbf61b0f.png](_resources/8d28e139e45676a621b9152bbbf61b0f.png)
 
-From the configure window select only the kit that contains the debug information.
+From the configure window select only the kit that contains the `Debug` configuration and uncheck the `Release` kit if it is displayed.
 
 ![68537db0ae3f4c376376c1baba0c407c.png](_resources/68537db0ae3f4c376376c1baba0c407c.png)
 
@@ -72,7 +72,7 @@ Before debugging an AMBF plugin, make sure that you are able to run the [debugge
 
 ### Step 1 - Build your plugin in debug mode
 
-Compile your plugin in debug mode. Remember to source the correct AMBF build. Before compiling also make sure that the CMAKE option `AMBF_DIR` points to the build-debug. After you changing the "AMBF_DIR" option in `ccmake`, you can configure with "c" and generate by pressing "g".
+Compile your plugin in debug mode. Remember to source the correct AMBF build. Before compiling also make sure that the CMAKE option `AMBF_DIR` points to the build-debug. After you change the "AMBF_DIR" option in `ccmake`, you can configure with "c" and generate by pressing "g".
 
 ```
 cd <plugin path>
@@ -98,5 +98,5 @@ Then, select a break point in your plugin and run the debugger.
 
 ### Troubleshooting
 
-In case of any problem, the best option is to erase the `CMakeLists.txt.user` that stores the QtCreator configuration for a project and the `CMakeCache.txt` (stored in your build folder) and start the debuging steps again.
+In case of any problem, the best option is to erase the `CMakeLists.txt.user` that stores the QtCreator configuration for a project and the `CMakeCache.txt` (stored in your build and build-debug folder) and start the debuging steps again.
 
